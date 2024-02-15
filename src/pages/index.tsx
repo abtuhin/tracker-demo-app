@@ -59,6 +59,7 @@ export default function Home() {
   const onDeleteTask = (id: number) => {
     const newList = tasks.filter((task: Task) => task.id !== id);
     setTasks([...newList]);
+    setTask(undefined);
     addToStore(newList);
   }
 

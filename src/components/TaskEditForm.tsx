@@ -17,7 +17,8 @@ const TaskEditForm = ({ task, onEditTask = () => {} }: TaskEditFormProps) => {
     <div>
       <h4>Edit task {task.name}</h4>
       <input name="name" value={name} onChange={(e) => setName(e.target.value)}/>
-      <button 
+      <button
+        style={{ margin: '5px 10px' }} 
         onClick={(e) => {
           e.preventDefault();
           onEditTask({...task, name: name});

@@ -9,7 +9,8 @@ const TaskForm = ({ onSubmitTask = () => {} }: TaskFormProps) => {
   return (
     <div style={{ marginTop: 15 }}>
       <input name="name" value={name} onChange={(e) => setName(e.target.value)}/>
-      <button 
+      <button
+        style={{ margin: '5px 10px' }} 
         onClick={(e) => {
           e.preventDefault();
           onSubmitTask(name);

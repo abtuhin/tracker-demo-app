@@ -16,11 +16,11 @@ const TaskList = ({
   return (
     <div style={{ display: "flex", flexDirection: 'column' }}>
       {tasks.map((task: Task) => (
-        <div key={task.id}>
-          <li>{task.name}</li>
-          <button onClick={(_) => onToggleStatus(task.id)}>{task.status ? "Done" : "Not Done"}</button>
-          <button onClick={(_) => onEditItem(task)}>Edit</button>
-          <button onClick={(_) => onDeleteTask(task.id)}>Delete</button>
+        <div key={task.id} style={{ display: "flex", flexDirection: 'row' }}>
+          <h4>{task.name}</h4>
+          <button style={{ margin: '5px 10px' }} onClick={(_) => onToggleStatus(task.id)}>{task.status ? "Completed" : "Not completed"}</button>
+          <button style={{ margin: '5px 10px' }} onClick={(_) => onEditItem(task)}>Edit</button>
+          <button style={{ margin: '5px 10px' }} onClick={(_) => onDeleteTask(task.id)}>Delete</button>
         </div>
       ))}
     </div>
